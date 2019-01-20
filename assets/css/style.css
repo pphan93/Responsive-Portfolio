@@ -25,12 +25,22 @@ html, body {
 
 /*NAVIGATION*/
 
-.header {
+.header_wrapper{
     background-color: #ffffff;
     border-bottom: 2px solid #cccccc;
 }
 
-/*nav list - add the width to match the content*/
+.header {
+
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.nav_right {
+    float:right;
+    width: 75%%;
+}
 
 .header ul {
     list-style-type: none;
@@ -41,41 +51,34 @@ html, body {
     margin: 0 auto;
 }
 
-/*Make the nav link float to the right except for the name - name is being override by the float left in the html file*/
-
-li {
+.header li {
     float: right;
 }
 
-li a {
-    display: block;
+.header a {
+    float: left;
     text-align: center;
-    padding: 15px 18px;
-    /*remove the underline and or stuff*/
+    padding: 12px;
     text-decoration: none;
+    padding: 15px 18px;
 }
 
-/*add hover over color for nav that is not active or the name section of left side*/
-
-li a:hover:not(.active):not(.name) {
+.header a:hover{
     background-color: rgb(230, 230, 230);
 }
 
-.active {
-    background-color: #4aaaa5;
-    color: white;
+.name_left {
+    width: 25%;
 }
 
-/*color the title name section of the left of nav*/
-
-.name {
+.name_left a{
     background-color: #4aaaa5;
     color: white;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-/*add specific hover color for the name*/
-
-.name:hover {
+.name_left a:hover {
     background-color: #38807c;
 }
 
@@ -187,3 +190,39 @@ li a:hover:not(.active):not(.name) {
 .footer p {
     color: white;
 }
+
+
+/*Responsive for different screen size*/
+
+@media only screen and (max-width: 640px) {
+    /* For mobile phones: */
+    [class*=""] {
+    }
+
+    .name_left {
+        width: 100%;
+    }
+
+    .name_left a{
+        float: none;
+        display: block;
+        
+    }
+
+    .nav_right {
+        width: 100%;
+        list-style-type: none;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+
+    .nav_right ul {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .nav_right li{
+        float:left;
+    }
