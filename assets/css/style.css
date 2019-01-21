@@ -194,9 +194,29 @@ html, body {
 
 /*Responsive for different screen size*/
 
+@media only screen and (max-width: 768px) {
+    /* For tablets: */
+    [class*=""] {
+    }
+
+    .header{
+        margin-left: 11px;
+    }
+
+    .content-wrapper{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
 @media only screen and (max-width: 640px) {
     /* For mobile phones: */
     [class*=""] {
+    }
+
+    .header{
+        margin-left: 0px;
     }
 
     .name_left {
@@ -214,7 +234,6 @@ html, body {
         list-style-type: none;
         text-align: center;
         margin: 0 auto;
-
     }
 
     .nav_right ul {
@@ -226,3 +245,5 @@ html, body {
     .nav_right li{
         float:left;
     }
+
+}
