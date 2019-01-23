@@ -39,7 +39,7 @@ html, body {
 
 .nav_right {
     float:right;
-    width: 75%%;
+    width: 75%;
 }
 
 .header ul {
@@ -148,28 +148,32 @@ html, body {
 
 .image_wrapper {
     max-width: 500px;
+    margin-right: -20px;
 }
 
 .image {
     /*make the image to show side by side*/
-    float: left;
     position: relative;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 20px;
+    float: left;
+    overflow: hidden;
+    margin:0;
 }
 
 .image img {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    width: 230px;
+    width: 100%;
 }
 
 .image p {
     position: absolute;
     bottom: 30px;
     background: #4aaaa5;
-    padding: 4px 10px;
+    /*padding: 4px 10px;*/
     color: white;
     margin: 0;
-    width: 210px;
+    width: 92%;
     text-align: center;
 }
 
@@ -194,6 +198,24 @@ html, body {
 
 /*Responsive for different screen size*/
 
+@media only screen and (max-width: 980px) {
+    /* For tablets: */
+    [class*=""] {
+    }
+
+    .header{
+        margin-left: 50px;
+    }
+
+    .content-wrapper{
+        margin-left: 50px;
+        max-width: 500px;
+    }
+
+
+}
+
+
 @media only screen and (max-width: 768px) {
     /* For tablets: */
     [class*=""] {
@@ -207,6 +229,7 @@ html, body {
         margin-left: 10px;
         margin-right: 10px;
     }
+
 
 }
 
@@ -244,6 +267,18 @@ html, body {
 
     .nav_right li{
         float:left;
+    }
+
+    #me_img{
+        width: 100%;
+    }
+
+    .image{
+        width:100%;
+    }
+
+    .image p{
+        width:96%;
     }
 
 }

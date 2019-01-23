@@ -13,16 +13,22 @@
 
 <body>
     <div id="wrapper">
-        <div class="header">
-            <ul>
-                <!--Add the float left for the name - this will override what the style is in the css-->
-                <li style="float: left"><a class="name" href="./index.html">Phuoc Phan</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <!--class active - give it a different color to indicated which page users are on-->
-                <li><a class="active" href="portfolio.html">Portfolio</a></li>
-                <li><a href="index.html">About</a></li>
+        <div class="header_wrapper">
+            <div class="header">
+                <div class="name_left">
+                    <a href="contact.html">Phuoc Phan</a>
 
-            </ul>
+                </div>
+                <div class="nav_right">
+                    <ul>
+                        <li><a  href="contact.html">Contact</a></li>
+                        <!--class active - give it a different color to indicated which page users are on-->
+                        <li><a class="active" href="portfolio.html">Portfolio</a></li>
+                        <li><a href="index.html">About</a></li>
+                
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="content-wrapper">
@@ -37,8 +43,9 @@
                         <p>Hangman</p>
                     </div>
 
+
                     <div class="image">
-                        <img src="./assets/images/rpg_game.jpg" alt="RPG Game">
+                        <img id="spaces" src="./assets/images/rpg_game.jpg" alt="RPG Game">
                         <p>RPG Game</p>
                     </div>
 
